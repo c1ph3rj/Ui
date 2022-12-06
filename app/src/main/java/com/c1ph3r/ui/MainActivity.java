@@ -21,11 +21,12 @@ import com.c1ph3r.ui.model.ListOfActivityModel;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    // Declaring required variables.
     private ActivityMainBinding MAIN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // ViewBinding.
         MAIN = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(MAIN.getRoot());
 
@@ -37,20 +38,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // To initialize the list view of components.
     private void setListView() {
         Intent intent;
+        // Creating new ArrayList to store the ListOfComponents.
         ArrayList<ListOfActivityModel> listOfActivityModels = new ArrayList<>();
         ListOfActivityModel ActivityModel = new ListOfActivityModel();
+        // Adding Field For buttons.
         ActivityModel.setTitle("List Of Buttons");
         ActivityModel.setTitleImg(AppCompatResources.getDrawable(this, R.drawable.buttons_ic));
         intent = new Intent(this, Buttons.class);
         ActivityModel.setIntent(intent);
-
         listOfActivityModels.add(ActivityModel);
 
+        // Initializing the adapter with the required arraylist.
         custom_list_adapter adapter = new custom_list_adapter(this,listOfActivityModels);
+        // Adding the adapter to the ListView.
         MAIN.listOfActivities.setAdapter(adapter);
-    }
+    }// End of setListView().
 
     // To identify and change the theme of the ui.
     private void setUiMode() {
@@ -84,13 +89,10 @@ public class MainActivity extends AppCompatActivity {
         MAIN.darkMode.setOnClickListener(view -> {
             // storing the shared pref value based on the dark mode.
             editor.putBoolean("DarkMode", AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO);
-
-
-
             // Intent to start the same activity to initialize the changes.
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.entry_anim, R.anim.exit_anim);
-            startActivity(intent);
+            startActivity(intent, options.toBundle());
             finish();
             // Applying the changes.
             editor.apply();

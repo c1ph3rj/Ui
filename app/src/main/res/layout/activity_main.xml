@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:fitsSystemWindows="true"
         android:gravity="center"
         android:weightSum="10">
 
@@ -21,15 +22,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="7"
-            android:fitsSystemWindows="true"
+            android:gravity="center"
             android:fontFamily="@font/oswald_variable_font_weight"
             android:text="Ui Components"
             android:textSize="40sp" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_weight="2"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
             android:layout_gravity="center_vertical"
             android:id="@+id/darkMode"
             app:lottie_rawRes="@raw/light_or_dark_mode_anim" />
@@ -37,11 +39,12 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:background="@drawable/background"
+        android:layout_margin="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="20dp"
         android:orientation="vertical">
 
 
@@ -49,9 +52,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none"
-            android:background="@drawable/background"
+            android:divider="@null"
             android:id="@+id/listOfActivities"/>
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </LinearLayout>

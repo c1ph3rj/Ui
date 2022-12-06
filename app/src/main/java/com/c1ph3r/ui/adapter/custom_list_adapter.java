@@ -2,6 +2,7 @@ package com.c1ph3r.ui.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +70,7 @@ public class custom_list_adapter extends ArrayAdapter<ListOfActivityModel> {
         viewHolder.Title.setText(ActivityItem.getTitle());
         viewHolder.TitleImg.setImageDrawable(ActivityItem.getTitleImg());
 
+        ActivityOptions options = ActivityOptions.makeCustomAnimation(context, R.anim.entry_anim, R.anim.exit_anim);
         convertView.setOnClickListener(passIntent ->
                 context.startActivity(ActivityItem.getIntent()));
 
