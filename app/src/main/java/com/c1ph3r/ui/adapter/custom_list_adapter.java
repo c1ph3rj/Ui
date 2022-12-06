@@ -70,7 +70,6 @@ public class custom_list_adapter extends ArrayAdapter<ListOfActivityModel> {
         viewHolder.Title.setText(ActivityItem.getTitle());
         viewHolder.TitleImg.setImageDrawable(ActivityItem.getTitleImg());
 
-        ActivityOptions options = ActivityOptions.makeCustomAnimation(context, R.anim.entry_anim, R.anim.exit_anim);
         convertView.setOnClickListener(passIntent ->
                 context.startActivity(ActivityItem.getIntent()));
 
