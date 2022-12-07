@@ -31,13 +31,14 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="15dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
         app:cardElevation="6dp">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="?attr/colorPrimaryContainer"
             android:scrollbars="none">
 
             <LinearLayout
@@ -54,17 +55,14 @@
                     android:text="NormalButton"
                     android:textAllCaps="false" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
+                    app:cornerRadius="8dp"
+                    android:backgroundTint="?attr/colorTertiaryContainer"
                     android:text="tonalButton" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"></LinearLayout>
 
                 <Button
                     style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -119,6 +117,7 @@
                         android:layout_height="wrap_content"
                         android:text="RadioGroup"
                         android:textSize="18dp"
+                        android:textColor="?attr/colorOnPrimaryContainer"
                         android:fontFamily="@font/josefin_sans_bold"/>
 
                     <RadioGroup
@@ -129,12 +128,14 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn 1"/>
 
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn 1"/>
 
                     </RadioGroup>
@@ -153,7 +154,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="RadioGroup With custom colors"
-                        android:textSize="18dp"
+                        android:textColor="?attr/colorOnPrimaryContainer"
+                        android:textSize="18sp"
                         android:fontFamily="@font/josefin_sans_bold"/>
 
                     <RadioGroup
@@ -164,19 +166,106 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            style="@style/customRadioButton"
+                            android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn 1"/>
 
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            style="@style/customRadioButton"
+                            android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn 1"/>
 
                     </RadioGroup>
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_sans_bold"
+                        android:textSize="18sp"
+                        android:textColor="?attr/colorOnPrimaryContainer"
+                        android:text="AnimatedRadioButtons"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@null"
+                            app:lottie_rawRes="@raw/radio_btn_ic"
+                            android:id="@+id/animatedRadioButton1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:textColor="?attr/colorOnPrimaryContainer"
+                            android:text="btnOne"/>
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:scaleType="centerCrop"
+                            android:background="@null"
+                            app:lottie_rawRes="@raw/radio_btn_ic"
+                            android:id="@+id/animatedRadioButton2"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:textColor="?attr/colorOnPrimaryContainer"
+                            android:text="btnTwo"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Default" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="customColor"
+                        style="@style/customCheckBox"/>
+
+                </LinearLayout>
+
+
             </LinearLayout>
+
 
         </ScrollView>
 

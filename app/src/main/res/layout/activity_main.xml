@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="16dp"
-        app:cardElevation="4dp"
+        app:cardElevation="6dp"
         app:cardCornerRadius="20dp"
         android:orientation="vertical">
 
@@ -53,6 +53,7 @@
             android:layout_height="match_parent"
             android:scrollbars="none"
             android:divider="@null"
+            android:background="?attr/colorPrimaryContainer"
             android:id="@+id/listOfActivities"/>
     </androidx.cardview.widget.CardView>
 

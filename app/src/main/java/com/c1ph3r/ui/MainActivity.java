@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             // Setting animation to the dark mode button
             MAIN.darkMode.setMinAndMaxProgress(0,0.5f);
-            MAIN.listOfActivities.setBackgroundColor(getColor(R.color.md_theme_light_outline));
             MAIN.darkMode.setSpeed(1);
             // Playing the animation.
             MAIN.darkMode.playAnimation();
@@ -79,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
             // Changing the animation to represent light theme.
             MAIN.darkMode.setMinAndMaxProgress(0, 0.5f);
             MAIN.darkMode.setSpeed(-1);
-            MAIN.listOfActivities.setBackgroundColor(getColor(R.color.md_theme_light_onPrimaryContainer));
             // Playing the animation.
             MAIN.darkMode.playAnimation();
         }
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("DarkMode", AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO);
             // Intent to start the same activity to initialize the changes.
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
-            ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.entry_anim, R.anim.exit_anim);
+            ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.bottom_up, R.anim.bottom_down);
             startActivity(intent, options.toBundle());
             finish();
             // Applying the changes.

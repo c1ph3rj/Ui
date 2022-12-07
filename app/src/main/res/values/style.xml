@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Radio Button : When selected it becomes blue -->
+    <style name="customRadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="buttonTint">@drawable/custom_radio_button</item>
+    </style>
+
+    <!-- Check Box : When Checked it becomes blue -->
+    <style name="customCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@drawable/custom_check_box</item>
+    </style>
+</resources>
