@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("DarkMode", AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO);
             // Intent to start the same activity to initialize the changes.
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
-            ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.bottom_up, R.anim.bottom_down);
+            ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.fade_out , R.anim.fade_in);
             startActivity(intent, options.toBundle());
             finish();
             // Applying the changes.
