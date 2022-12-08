@@ -95,7 +95,8 @@
                     android:layout_marginBottom="10dp"
                     android:text="iconButton"
                     app:cornerRadius="8dp"
-                    app:icon="@drawable/icon_ic"
+                    app:iconTint="?attr/colorPrimaryInverse"
+                    app:icon="@drawable/happy_ic"
                     app:iconGravity="textStart" />
 
                 <ImageButton
@@ -129,14 +130,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="?attr/colorOnPrimaryContainer"
-                            android:text="btn 1"/>
+                            android:text="btn1"/>
 
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="?attr/colorOnPrimaryContainer"
-                            android:text="btn 1"/>
+                            android:text="btn2"/>
 
                     </RadioGroup>
 
@@ -168,7 +169,7 @@
                             android:layout_height="wrap_content"
                             style="@style/customRadioButton"
                             android:textColor="?attr/colorOnPrimaryContainer"
-                            android:text="btn 1"/>
+                            android:text="btn1"/>
 
 
                         <RadioButton
@@ -176,7 +177,7 @@
                             android:layout_height="wrap_content"
                             style="@style/customRadioButton"
                             android:textColor="?attr/colorOnPrimaryContainer"
-                            android:text="btn 1"/>
+                            android:text="btn2"/>
 
                     </RadioGroup>
 
@@ -185,11 +186,46 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="vertical">
 
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_sans_bold"
+                        android:textSize="18sp"
+                        android:textColor="?attr/colorOnPrimaryContainer"
+                        android:text="RadioButtonWithCustomButtons"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/customRadioButton"
+                            android:button="@drawable/happy_ic"
+                            android:layout_margin="4dp"
+                            android:paddingStart="4dp"
+                            android:textColor="?attr/colorOnPrimaryContainer"
+                            android:text="btn1"
+                            tools:ignore="RtlSymmetry" />
+
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/customRadioButton"
+                            android:button="@drawable/sad_ic"
+                            android:layout_margin="4dp"
+                            android:paddingStart="4dp"
+                            android:textColor="?attr/colorOnPrimaryContainer"
+                            android:text="btn2"
+                            tools:ignore="RtlSymmetry" />
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -224,7 +260,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/josefin_sans_bold"
                             android:textColor="?attr/colorOnPrimaryContainer"
-                            android:text="btnOne"/>
+                            android:text="btn1"/>
 
                         <com.airbnb.lottie.LottieAnimationView
                             android:layout_width="40dp"
@@ -239,7 +275,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/josefin_sans_bold"
                             android:textColor="?attr/colorOnPrimaryContainer"
-                            android:text="btnTwo"/>
+                            android:text="btn2"/>
 
                     </LinearLayout>
                 </LinearLayout>
