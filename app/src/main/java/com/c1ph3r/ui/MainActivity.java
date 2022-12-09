@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
         ActivityModel.setIntent(intent);
         listOfActivityModels.add(ActivityModel);
 
+        // Adding Field for EditText.
+        ActivityModel.setTitle("List Of TextFields");
+
         // Initializing the adapter with the required arraylist.
         custom_list_adapter adapter = new custom_list_adapter(this,listOfActivityModels);
         // Adding the adapter to the ListView.

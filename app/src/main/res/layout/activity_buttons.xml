@@ -53,6 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="NormalButton"
+                    android:fontFamily="@font/josefin_sans_bold"
                     android:textAllCaps="false" />
 
                 <com.google.android.material.button.MaterialButton
@@ -61,6 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     app:cornerRadius="8dp"
+                    android:fontFamily="@font/josefin_sans_bold"
                     android:backgroundTint="?attr/colorTertiaryContainer"
                     android:text="tonalButton" />
 
@@ -69,6 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/josefin_sans_bold"
                     android:text="textedButton"
                     android:textAllCaps="false" />
 
@@ -76,6 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/josefin_sans_bold"
                     android:backgroundTint="@color/secondaryLightColor"
                     android:text="materialButton"
                     app:cornerRadius="8dp" />
@@ -86,6 +90,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/gradient_background"
                     android:text="gradientButton"
+                    android:fontFamily="@font/josefin_sans_bold"
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
 
@@ -94,6 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="iconButton"
+                    android:fontFamily="@font/josefin_sans_bold"
                     app:cornerRadius="8dp"
                     app:iconTint="?attr/colorPrimaryInverse"
                     app:icon="@drawable/happy_ic"
@@ -129,6 +135,7 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefin_sans_bold"
                             android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn1"/>
 
@@ -136,6 +143,7 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefin_sans_bold"
                             android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn2"/>
 
@@ -168,6 +176,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/customRadioButton"
+                            android:fontFamily="@font/josefin_sans_bold"
                             android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn1"/>
 
@@ -176,6 +185,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/customRadioButton"
+                            android:fontFamily="@font/josefin_sans_bold"
                             android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn2"/>
 
@@ -208,6 +218,7 @@
                             style="@style/customRadioButton"
                             android:button="@drawable/happy_ic"
                             android:layout_margin="4dp"
+                            android:fontFamily="@font/josefin_sans_bold"
                             android:paddingStart="4dp"
                             android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn1"
@@ -221,6 +232,7 @@
                             android:button="@drawable/sad_ic"
                             android:layout_margin="4dp"
                             android:paddingStart="4dp"
+                            android:fontFamily="@font/josefin_sans_bold"
                             android:textColor="?attr/colorOnPrimaryContainer"
                             android:text="btn2"
                             tools:ignore="RtlSymmetry" />
@@ -232,6 +244,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -289,11 +302,15 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/josefin_sans_bold"
                         android:text="Default" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/josefin_sans_bold"
                         android:text="customColor"
                         style="@style/customCheckBox"/>
 
