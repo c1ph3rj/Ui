@@ -40,19 +40,21 @@ public class MainActivity extends AppCompatActivity {
 
     // To initialize the list view of components.
     private void setListView() {
-        Intent intent;
-        // Creating new ArrayList to store the ListOfComponents.
+         // Creating new ArrayList to store the ListOfComponents.
         ArrayList<ListOfActivityModel> listOfActivityModels = new ArrayList<>();
         ListOfActivityModel ActivityModel = new ListOfActivityModel();
         // Adding Field For buttons.
         ActivityModel.setTitle("List Of Buttons");
         ActivityModel.setTitleImg(AppCompatResources.getDrawable(this, R.drawable.buttons_ic));
-        intent = new Intent(this, Buttons.class);
-        ActivityModel.setIntent(intent);
+        ActivityModel.setIntent(new Intent(this, Buttons.class));
         listOfActivityModels.add(ActivityModel);
 
         // Adding Field for EditText.
-        ActivityModel.setTitle("List Of TextFields");
+        ActivityModel = new ListOfActivityModel();
+        ActivityModel.setTitle("List Of EditText");
+        ActivityModel.setTitleImg(AppCompatResources.getDrawable(this, R.drawable.text_box_icon));
+        ActivityModel.setIntent(new Intent(MainActivity.this, EditText.class));
+        listOfActivityModels.add(ActivityModel);
 
         // Initializing the adapter with the required arraylist.
         custom_list_adapter adapter = new custom_list_adapter(this,listOfActivityModels);
