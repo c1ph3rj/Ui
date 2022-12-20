@@ -316,6 +316,46 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/ChipButtons"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:id="@+id/ChipBtn1"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:text="Chips"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ChipBtn2"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:text="Chips packet"/>
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/CheckedChips">
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </LinearLayout>
 
             </LinearLayout>
 
