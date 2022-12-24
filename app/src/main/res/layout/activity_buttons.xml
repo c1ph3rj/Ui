@@ -357,6 +357,22 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipIcon="@drawable/chip_ic"
+                        android:text="jeevaprakash"
+                        app:closeIconVisible="true"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
 

@@ -50,39 +50,22 @@ public class Buttons extends AppCompatActivity {
                     Chip button = findViewById(SelectedChipId);
                     Chip ChipButton = new Chip(Buttons.this, null, com.google.android.material.R.style.Widget_MaterialComponents_Chip_Choice);
                     ChipButton.setText(button.getText());
-                    ChipButton.setCloseIcon(AppCompatResources.getDrawable(Buttons.this, R.drawable.close_ic));
+                    ChipButton.setCloseIconVisible(true);
                     ChipButton.setChecked(true);
                     BUTTONS.CheckedChips.addView(ChipButton);
                 }
             }
         });
-
-        BUTTONS.CheckedChips.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
-            @Override
-            public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
-                SelectedChip = new ArrayList<>();
-                SelectedChip.addAll(BUTTONS.CheckedChips.getCheckedChipIds());
-                for(Integer SelectedChipId: SelectedChip){
-                    Chip button = findViewById(SelectedChipId);
-                    Chip ChipButton = new Chip(Buttons.this, null, com.google.android.material.R.style.Widget_MaterialComponents_Chip_Choice);
-                    ChipButton.setText(button.getText());
-                    BUTTONS.CheckedChips.addView(ChipButton);
-            }
-        }
-    });
     }
 
     private void customRadioButton() {
         BUTTONS.animatedRadioButton1.setOnClickListener(OnClickOfBtn1 -> {
             if(btnSelected == 0){
-                System.out.println("4 \n\n\n\n");
                 BUTTONS.animatedRadioButton1.playAnimation();
             }else if(btnSelected == BUTTONS.animatedRadioButton1.getId()){
-                System.out.println("5 \n\n\n\n");
                 BUTTONS.animatedRadioButton1.setSpeed(1);
                 BUTTONS.animatedRadioButton1.playAnimation();
             }else {
-                System.out.println("6 \n\n\n\n");
                 LottieAnimationView animRadioBtn = findViewById(btnSelected);
                 animRadioBtn.setSpeed(-1);
                 animRadioBtn.playAnimation();
@@ -108,5 +91,4 @@ public class Buttons extends AppCompatActivity {
             btnSelected = BUTTONS.animatedRadioButton2.getId();
         });
     }
-
 }
